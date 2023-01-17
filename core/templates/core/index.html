@@ -1,9 +1,21 @@
 {% extends 'base.html' %}
 
-{% block title %}INDEX PAGE{% endblock title %}
-
 {% block content %}
+    <div class="container">
+        {% for post in posts %}
+        <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">{{post.title}}</h5>
+              <p class="card-text">{{post.description}}</p>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+    {% comment %} This thing (posts) is a list of object {% endcomment %}
 
-    <h1>Index page yoho!!!!</h1>
 
+
+
+    {% comment %} {% this one is for some sort of code %} {% endcomment %}
+    {% comment %} {{this is for variables}} {% endcomment %}
 {% endblock content %}

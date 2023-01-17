@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core'
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'core/templates')
+            os.path.join(BASE_DIR, 'core/templates'),
+            os.path.join(BASE_DIR, 'account/templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -118,3 +120,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# s3 buckets
+# RDS
+
+
+# EC2 
