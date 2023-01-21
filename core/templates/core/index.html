@@ -1,7 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
     <div class="container">
+
+        {% if request.user.is_authenticated %}
+        <div class="card mb-3 mt-3">
+          <div class="card-body">
+            <h5 class="card-title">Hi {{request.user}}!</h5>
+            <p class="card-text">You can create posts by clicking on the button below.</p>
+            <a href="#" class="btn btn-primary">Create a new Post</a>
+          </div>
+        </div>
+        
+        {% endif %}
+
         {% for post in posts %}
         <div class="card" >
             <div class="card-body">
